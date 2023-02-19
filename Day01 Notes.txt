@@ -1,0 +1,354 @@
+Java:
+-----
+-Java is an Object Oriented Programming Language developed by James Gosling at Sun Microsystems
+
+-Sun Microsystems is acquired by Oracle Corp in 2010
+
+Object Oriented Concepts:
+-------------------------
+-Objects
+-Classes
+-Abstraction
+-Encapsulation
+-Inheritance
+-Polymorphism
+
+Before OOP we were using Procedure Oriented Programming(C)
+
+C-Language:
+-----------
+
+1)Security: not providing security for data.
+
+#include<stdio.h>
+
+int rollno=555;
+void main()
+{
+int age=23;
+...
+..
+...
+....
+..
+
+}
+
+2)Reusability:though we have functions not providing complete reusability
+
+With the help of inheritance we can get complete reusability
+
+Student Application
+--------------------
+10 function
+
+class Student
+{
+10 functions
+}
+class EnggStudent extends Student
+{
+
+}
+
+
+
+3)Platform dependent:
+
+Test.c---->c compiler---->Test.exe(Native code)
+
+Object Oriented Programming:
+----------------------------
+
+Object:
+-------
+Anything which can be distinctly identified is called as an object.
+
+It is a real time entity.
+
+Every object has an identity, state and behavior
+
+refer diagram object.png
+
+
+class:
+------
+-A class is a collection of data members and methods.
+-It is a collection of similar objects with same attributes and actions
+
+e.g.,
+
+class Person
+{
+//Data members
+String name;
+int age;
+float height;
+
+//methods
+eat(){...}
+walk(){...}
+sleep(){...}
+}
+
+age=20;//error
+
+The members(data members and methods) of the class are accessed using objects with dot(.) operator
+
+Creating Objects:
+-----------------
+syntax(Rules of Language)
+------
+
+ClassName objName=new ClassName();
+
+e.g.,
+Person p=new Person();//p is an object of class Person
+p.name="Jay";
+p.age=25;
+p.height=5.9
+p.eat();
+
+Identifying Objects and Classes:
+--------------------------------
+Mr.XXX teaches Java at RRR Technologies.PPP attends Java Sessions
+Mrs.XXX teaches AWS at the same company.QQQ attends AWS Sessions
+
+Objects(Nouns)
+--------------
+Mr.XXX
+Java
+RRR
+PPP
+Mrs.XXX
+AWS
+QQQ
+
+Classes(A class is a collection of related objects)
+-------
+Faculty(Mr.XXX and Mrs.XXX)
+Course(Java and AWS)
+Company(RRR)
+Student(PPP and QQQ)
+
+Java Features:
+--------------
+1.Simple
+	-Java is simple as it contains lots of APIs(Application Programming Interfaces)/libraries
+
+e.g., Arrays.sort(n);
+
+2.Object-Oriented
+	-Java is Object Oriented(OO) as it supports the OO features like objects, 	 	  	classes, abstraction, encapsulation, inheritance and polymorphism
+
+3.Robust:
+	-Robust means strong
+	-In Java we can develop robust applications using Exception Handling which 	avoids abnormal termination of application
+
+4.Platform Independent
+
+-A Java program can run on any platform(OS)
+-A Java program is Write Once Run Anywhere(WORA)
+-A Java program is a collection of classes
+
+Test.java
+---------
+class A
+{
+main(){...}
+}
+class B
+{
+main(){...}
+}
+class C
+{
+
+}
+
+To Compile:
+-----------
+>javac Test.java
+	-creates A.class, B.class and C.class
+	-these .class files are called as Byte Codes
+	-these Byte Codes are platform independent
+
+-To run a Java program atleast one class should contain main method
+-main() is the entry point to run Java program
+
+-We can run only .class files which contains main()
+
+To Run
+------
+>java A -> runs the program from A class main()
+
+>java B -> runs the program from B class main()
+
+>java C => Error - No main() found
+
+>java X => Error - No class definition found
+
+
+5.Interpreted
+	-java command is an interpreter
+	-java interpreter executes the byte code line by line
+	-javac command is a compiler
+	-java compiler will convert Java source code into byte code at a time
+
+Java Compile Converts the Source code to Byte Code
+Java(JRE) converts the Byte code to O/S understandable format
+
+
+6.Portable
+	-Java is portable since the size of all data types is same on all platforms(OS)
+
+	C/C++
+	-----
+	size of int data type =>2 bytes on 32-bit/4 bytes on 64-bit OS
+
+	Java
+	----
+	size of int data type =>4 bytes on 32-bit/64-bit
+
+7.Secure
+	-Java is secure as Java does not support pointers as pointers violate security
+	
+	C/C++
+	-----
+	A pointer is a variable which contains the address of another variable
+
+	e.g.,
+			int n=10;
+			int *p=&n;//address of n variable
+
+8.Multithreaded
+	-A thread is a light weight process under execution within a process
+	-Multithreading is used to increase the performance of application
+
+9.Dynamic
+	-In Java memory allocation for arrays, strings, objects is done during 	runtime(dynamic)
+	-Java is automatic garbage collection
+
+10.Distributed
+	-Distributed applications are used for the purpose of exchanging data from one 	application to another application	
+
+Developing Java Application at command prompt:
+----------------------------------------------
+-Open command prompt by typing "cmd" in search/run
+
+c:\>d:
+
+d:\>
+
+-Create a folder/directory "JavaPrograms" as follows
+
+d:\>md JavaPrograms2023
+
+	md means make directory
+
+-Change the folder to "JavaPrograms2023 as follows
+	d:\>cd JavaPrograms2023
+	d:\JavaPrograms2023>
+		cd means change directory
+
+-Create a Java source code file "Welcome.java" as follows
+	d:\JavaPrograms2023>notepad Welcome.java
+
+-Type the following code in Welcome.java as follows
+
+	//To display welcome message onto the screen
+	class Welcome
+	{
+		public static void main(String[] args)
+		{
+			System.out.println("Welcome to Java");
+		}
+	}
+
+Note: Save the file(Ctrl+s)
+
+-Compile the Java source code, Welcome.java as follows
+	d:\JavaProgram2023>javac Welcome.java
+
+	which creates Welcome.class file called as Byte Code
+
+
+-Run the Java Byte code file, Welcome.class as follows
+	d:\JavaPrograms2023>java Welcome
+
+	which displays "Welcome to Java" message onto the screen
+
+Note:
+-----
+-Every statement in Java should end with a semicolon(;)
+-Java is case sensitive programming language means there is a difference between uppercase and lowercase letters
+
+IDEs
+----
+-IDE stands for Integrated Development Environment
+-IDEs are used to develop the application easily and rapidly
+
+Popular Java IDEs
+-----------------
+-Eclipse
+-NetBeans
+-IntelliJ
+-JDeveloper
+-JBuilder
+-MyEclipse
+
+Developing a Java Application in Eclipse IDE:
+---------------------------------------------
+-Create a Java Project
+	
+	click on File->New->Project->Java project
+
+	Project Name: Day01Proj01
+
+	and click finish
+
+	Create module-info.java=>Don't Create
+
+-Create a class in Java Project(Day01Proj01)
+
+	Right click on Day01Proj01->New->Class
+
+	Package Name:mypackage
+	Name:Welcome
+
+	and make check mark to main()
+
+	and click on Finish
+
+-Type the below code in Welcome.java
+
+package mypackage;
+
+public class Welcome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to Java!!!");
+	}
+
+}
+
+-Run the Application
+	Right click on Welcome.java->Run As->Java Application
+
+	Which opens a console and displays "Welcome to Java!!!" in console
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
